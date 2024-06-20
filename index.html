@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      .hidden {
+        display: none;
+      }
+      .border-red-600 {
+        border-color: red;
+      }
+      .text-red-900 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col justify-center items-center bg-orange-400"
+  >
+    <div class="bg-white max-w-96 rounded-2xl">
+      <h1
+        class="bg-slate-600 text-center text-white text-2xl rounded-t-2xl p-4"
+      >
+        REGISTRATION FORM
+      </h1>
+      <form id="form" class="px-7 py-5" novalidate>
+        <div class="relative">
+          <label for="username" class="mb-1 block">Username</label>
+          <input
+            required
+            id="username"
+            type="text"
+            class="block p-1 border rounded focus:outline-none focus:ring-2 focus:ring-blue-200 mb-3 min-w-80 relative"
+          />
+          <div
+            class="error-message hidden absolute -bottom-3 text-xs text-red-900"
+          >
+            Username must be at least 5 characters
+          </div>
+
+          <div class="error hidden" id="usernameIconError">
+            <i
+              class="text-red-700 fa-solid fa-circle-exclamation absolute bottom-2 right-2"
+            ></i>
+          </div>
+          <div class="check hidden" id="usernameIconCheck">
+            <i
+              class="fa-sharp fa-solid fa-circle-check absolute bottom-2 right-2"
+              style="color: #63e6be"
+            ></i>
+          </div>
+        </div>
+
+        <div class="relative">
+          <label for="email" class="mb-1 block">Email</label>
+          <input
+            required
+            id="email"
+            type="email"
+            class="block p-1 border rounded focus:outline-none focus:ring-2 focus:ring-blue-200 mb-3 min-w-80"
+          />
+          <div
+            class="error-message hidden absolute -bottom-3 text-xs text-red-900"
+          >
+            Please enter a valid email address
+          </div>
+
+          <div class="error hidden" id="emailIconError">
+            <i
+              class="text-red-700 fa-solid fa-circle-exclamation absolute bottom-2 right-2"
+            ></i>
+          </div>
+          <div class="check hidden" id="emailIconCheck">
+            <i
+              class="fa-sharp fa-solid fa-circle-check absolute bottom-2 right-2"
+              style="color: #63e6be"
+            ></i>
+          </div>
+        </div>
+
+        <div class="relative">
+          <label for="password" class="mb-1 block">Password</label>
+          <input
+            required
+            id="password"
+            type="password"
+            class="block p-1 border rounded focus:outline-none focus:ring-2 focus:ring-blue-200 mb-3 min-w-80"
+          />
+          <div
+            class="error-message hidden absolute -bottom-3 text-xs text-red-900"
+          >
+            Please enter a password
+          </div>
+
+          <div class="error hidden" id="passwordErrorIcon">
+            <i
+              class="text-red-700 fa-solid fa-circle-exclamation absolute bottom-2 right-2"
+            ></i>
+          </div>
+          <div class="check hidden" id="passwordCheckIcon">
+            <i
+              class="fa-sharp fa-solid fa-circle-check absolute bottom-2 right-2"
+              style="color: #63e6be"
+            ></i>
+          </div>
+        </div>
+
+        <div class="relative">
+          <label for="password2" class="mb-1 block">Retype Password</label>
+          <input
+            required
+            id="password2"
+            type="password"
+            class="block p-1 border rounded focus:outline-none focus:ring-2 focus:ring-blue-200 mb-3 min-w-80"
+          />
+          <div
+            class="error-message hidden absolute -bottom-3 text-xs text-red-900"
+          >
+            Password does not match
+          </div>
+          <div class="error hidden" id="password2ErrorIcon">
+            <i
+              class="icon text-red-700 fa-solid fa-circle-exclamation absolute bottom-2 right-2"
+            ></i>
+          </div>
+          <div class="check hidden" id="password2CheckIcon">
+            <i
+              class="fa-sharp fa-solid fa-circle-check absolute bottom-2 right-2"
+              style="color: #63e6be"
+            ></i>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          id="btnSubmit"
+          class="border rounded-md bg-slate-600 hover:bg-slate-900 text-white min-w-80 py-3 mt-6"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
